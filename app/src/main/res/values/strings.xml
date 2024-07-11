@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Memocard</string>
+    <string name="title">Memory Match is a single-player card game where you aim to uncover pairs of identical cards. All cards are initially face down, and you need to use your memory to remember where each card is located. You click on two cards at a time, and if they match, they remain face up. The goal is to uncover all matching pairs in the fewest number of attempts.</string>
+    <string name="category">Easy: This level is perfect for beginners. It features a smaller grid of cards with fewer unique images, making it easier to remember their locations. Medium: This level offers a good challenge for most players. It has a larger grid with more unique images, requiring a bit more focus and memory. Hard: Get ready for a memory test! This level boasts the most cards and unique images, pushing your memory skills to the limit.</string>
+</resources>

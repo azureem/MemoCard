@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/infoimg"
+    android:orientation="vertical">
+
+
+    <View
+        android:id="@+id/above"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/above"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/nazad" />
+
+        <TextView
+            android:id="@+id/food_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/alata"
+            android:text="MemoCard"
+            android:textColor="@color/white"
+            android:textSize="24dp">
+        </TextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:background="@color/my_yellow"/>
+    </FrameLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frameLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/pos_image"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/melep"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.245"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/pos_image2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="36dp"
+                android:src="@drawable/mbackcard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.736"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/pos_image3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="80dp"
+                android:src="@drawable/msun"
+                app:layout_constraintEnd_toEndOf="@id/pos_image2"
+                app:layout_constraintHorizontal_bias="0.623"
+                app:layout_constraintStart_toStartOf="@id/pos_image"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title_info1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alata"
+                android:text="A Minimalist Puzzle with\nExponential Challenge"
+                android:textSize="0dp"
+                android:textColor="#1D3557"
+                android:layout_marginStart="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pos_image" />
+
+            <TextView
+                android:id="@+id/text_pos2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/alata"
+                android:justificationMode="inter_word"
+                android:text="@string/title"
+                android:textColor="#B3FFFFFF"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_info1">
+            </TextView>
+
+            <TextView
+                android:id="@+id/title_info2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alata"
+                android:text="@string/category"
+                android:textColor="#B3FFFFFF"
+                android:textSize="18dp"
+                android:layout_marginHorizontal="16dp"
+                android:justificationMode="inter_word"
+                app:layout_constraintTop_toBottomOf="@id/text_pos2"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <TextView
+                android:id="@+id/text_pos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/alata"
+                android:justificationMode="inter_word"
+                android:textSize="18sp"
+                android:layout_marginHorizontal="16dp"
+                android:textColor="#1D3557"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_info2"
+                tools:ignore="UnusedAttribute" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/contact_constr"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_contact"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_pos">
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="32dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#735751"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/get_touch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/alata"
+                    android:text="Get in touch"
+                    android:textColor="#735751"
+                    android:textSize="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/line" />
+
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/tg_anim"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_marginStart="50dp"
+                    app:layout_constraintEnd_toStartOf="@id/insta_anim"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/get_touch"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="tganim.json"
+                    app:lottie_loop="true"
+                    app:lottie_url="REPLACE_JSON_URL" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/insta_anim"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:layout_constraintBottom_toBottomOf="@id/tg_anim"
+                    app:layout_constraintEnd_toStartOf="@id/gmail_anim"
+                    app:layout_constraintStart_toEndOf="@id/tg_anim"
+                    app:layout_constraintTop_toTopOf="@id/tg_anim"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="instaanim.json"
+                    app:lottie_loop="true"
+                    app:lottie_url="REPLACE_JSON_URL" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/gmail_anim"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="50dp"
+                    app:layout_constraintBottom_toBottomOf="@id/insta_anim"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/insta_anim"
+                    app:layout_constraintTop_toTopOf="@id/insta_anim"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="gmailanim.json"
+                    app:lottie_loop="true"
+                    app:lottie_url="REPLACE_JSON_URL" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/my_yellow"
+                app:layout_constraintTop_toBottomOf="@id/contact_constr"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+

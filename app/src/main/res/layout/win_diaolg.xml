@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66000000"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="48dp">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/shape_splash_anim"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:elevation="150dp"
+        android:padding="25dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/my_dlg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintStart_toStartOf="@+id/my_dlg"
+        app:layout_constraintTop_toTopOf="@id/my_dlg"
+        app:layout_constraintVertical_bias="0.52"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="yut.json"
+        app:lottie_url="REPLACE_JSON_URL" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/my_dlg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_winner"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/awesome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bbold"
+            android:text="Awesome!"
+            android:textColor="@color/my_yellow"
+            android:textSize="36dp"
+            android:layout_marginTop="48sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/win_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/bbold"
+            android:gravity="center"
+            android:text=" You matched all the pairs. \nNow you can try a harder level "
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/awesome" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/menu_win"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu"
+            android:background="@drawable/lalal"
+            android:textSize="24dp"
+            android:fontFamily="@font/bbold"
+            android:textAllCaps="false"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/my_yellow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintTop_toBottomOf="@id/win_text"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/menu_win"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

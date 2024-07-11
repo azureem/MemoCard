@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.example.mindmatch.ui.screen.splash.SplashScreen"
+        android:label="SplashScreen"
+        tools:layout="@layout/screen_splash">
+        <action
+            android:id="@+id/action_splashScreen_to_menuScreen"
+            app:destination="@id/menuScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuScreen"
+        android:name="com.example.mindmatch.ui.screen.level.MenuScreen"
+        android:label="MenuScreen"
+        tools:layout="@layout/screen_menu">
+        <action
+            android:id="@+id/action_menuScreen_to_gameScreen"
+            app:destination="@id/gameScreen" />
+        <action
+            android:id="@+id/action_menuScreen_to_infoScreen"
+            app:destination="@id/infoScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameScreen"
+        android:name="com.example.mindmatch.ui.screen.game.GameScreen"
+        android:label="GameScreen"
+        tools:layout="@layout/screen_game"/>
+    <fragment
+        android:id="@+id/infoScreen"
+        android:name="com.example.mindmatch.ui.screen.info.InfoScreen"
+        android:label="InfoScreen"
+        tools:layout="@layout/screen_info"/>
+</navigation>
